@@ -279,7 +279,7 @@ int main(int argc, char** argv) {
     error_msg(rc, "associating FD with SSL client");
 
     rc = SSL_connect(sslClient);
-    error_msg(rc, "connecting with SSL")
+    error_msg(rc, "connecting with SSL");
 
     char temp[16];
     sprintf(temp, "ID=%s\n", opt_id);
