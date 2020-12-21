@@ -4,14 +4,14 @@
 
 default: 
 	gcc -g -Wall -Wextra lab4c_tcp.c -o lab4c_tcp -lmraa -lm
-	gcc -g -Wall -Wextra lab4c_tsl.c -o lab4c_tls -lmraa -lm -lssl -lcrypto
+	gcc -g -Wall -Wextra lab4c_tls.c -o lab4c_tls -lmraa -lm -lssl -lcrypto
 
 buildtest:
 	gcc -g -Wall -Wextra lab4c_tcp.c -o lab4c_tcp -D PC -lm
-	gcc -g -Wall -Wextra lab4c_tsl.c -o lab4c_tls -D PC -lm -lssl -lcrypto
+	gcc -g -Wall -Wextra lab4c_tls.c -o lab4c_tls -D PC -lm -lssl -lcrypto
 
 dist: lab4c.tgz
-submission_files = Makefile README lab4b.c test.sh
+submission_files = Makefile README lab4c_tcp.c lab4c_tls.c
 
 lab4c.tgz: $(submission_files)
 	tar -czf lab4c-805419480.tar.gz $(submission_files)
