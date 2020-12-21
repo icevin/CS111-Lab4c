@@ -6,7 +6,7 @@ default:
 	gcc -g -Wall -Wextra lab4b.c -o lab4b -lmraa -lm
 
 buildtest:
-	gcc -g -Wall -Wextra lab4b.c -o lab4b -D PC -lm
+	gcc -g -Wall -Wextra lab4c_tcp.c -o lab4c_tcp -D PC -lm
 
 dist: lab4c.tgz
 submission_files = Makefile README lab4b.c test.sh
